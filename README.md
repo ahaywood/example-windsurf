@@ -1,60 +1,43 @@
-# Standard RedwoodSDK Starter
+# RedwoodSDK Example with Windsurf
 
-This "standard starter" is the recommended implementation for RedwoodSDK. You get a Typescript project with:
+This project is an example of RedwoodSDK with Windsurf integration. It includes custom rules and workflows for working with RedwoodSDK.
 
-- Vite
-- database (Prisma via D1)
-- Session Management (via DurableObjects)
-- Passkey authentication (Webauthn)
-- Storage (via R2)
-
-## Creating your project
+## Getting Started
 
 ```shell
-npx degit redwoodjs/sdk/starters/standard my-project-name
-cd my-project-name
 pnpm install
-```
-
-## Running the dev server
-
-```shell
 pnpm dev
 ```
 
 Point your browser to the URL displayed in the terminal (e.g. `http://localhost:5173/`). You should see a "Hello World" message in your browser.
 
-## Deploying your app
+## Windsurf Custom Rules
 
-### Wrangler Setup
+This project includes the following custom rules for RedwoodSDK development:
 
-Within your project's `wrangler.jsonc`:
+1. **RWSDK Interruptors** - Rules for implementing and using RedwoodSDK interruptors
+2. **RWSDK Middleware** - Rules for implementing and using RedwoodSDK middleware
+3. **RWSDK React** - Rules for React components and patterns in RedwoodSDK
+4. **RWSDK Request/Response** - Rules for handling requests and responses in RedwoodSDK
+5. **RWSDK Database** - Rules for working with Prisma and D1 database operations
+6. **RWSDK Storage** - Rules for file operations with Cloudflare R2 storage
+7. **RWSDK Realtime** - Rules for implementing realtime updates with WebSockets and Durable Objects
+8. **RWSDK Queues** - Rules for implementing background tasks with Cloudflare Queues
+9. **RWSDK Cron** - Rules for implementing scheduled tasks with Cloudflare Cron Triggers
+10. **RWSDK Environment Variables** - Rules for managing environment variables and secrets
+11. **RWSDK Security** - Rules for implementing security headers and best practices
 
-- Replace the `__change_me__` placeholders with a name for your application
+## Windsurf Workflows
 
-- Create a new D1 database:
+The following workflows are available to help with common RedwoodSDK development tasks:
 
-```shell
-npx wrangler d1 create my-project-db
-```
-
-Copy the database ID provided and paste it into your project's `wrangler.jsonc` file:
-
-```jsonc
-{
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "my-project-db",
-      "database_id": "your-database-id",
-    },
-  ],
-}
-```
-
-### Authentication Setup
-
-For authentication setup and configuration, including optional bot protection, see the [Authentication Documentation](https://docs.rwsdk.com/core/authentication).
+1. **/interrupters** - How to implement and use RedwoodSDK interruptors
+2. **/layout** - How to create and use layout components in a Redwood SDK project
+3. **/middleware** - How to implement and use RedwoodSDK middleware
+4. **/react-email** - How to create and use React Email templates in a Redwood SDK project
+5. **/resend** - How to implement email sending with Resend in a Redwood SDK project
+6. **/shadcn** - How to add shadcn/ui to a Redwood SDK project
+7. **/tailwind** - How to add TailwindCSS v4 to a Redwood SDK project
 
 ## Further Reading
 
